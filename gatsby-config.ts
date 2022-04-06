@@ -2,8 +2,8 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: ``,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Mapedia.org`,
+    siteUrl: `https://www.mapedia.org`,
   },
   plugins: [
     {
