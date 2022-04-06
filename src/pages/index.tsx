@@ -1,179 +1,163 @@
-import * as React from "react"
+import {
+  Box,
+  Button,
+  Center,
+  Flex,
+  Heading,
+  Input,
+  List,
+  ListIcon,
+  ListItem,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
+import { TiArrowRightOutline } from "@react-icons/all-files/ti/TiArrowRightOutline";
+import * as React from "react";
+import { Accordeon } from "../components/Accordeon";
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
-
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLink = {
-  text: "TypeScript Documentation",
-  url: "https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/",
-  color: "#8954A8",
-}
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative" as "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-// data
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
-
-// markup
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Home Page</title>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
-        🎉🎉🎉
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this page
-        update in real-time. 😎
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=ts-docs&utm_campaign=minimal-starter-ts`}
+    <main>
+      <Flex w="100%" direction="column" alignItems="stretch" pb={200}>
+        <Center pt={20}>
+          <Heading size="4xl" color="teal.600">
+            Mapedia.org
+          </Heading>
+        </Center>
+        <Flex direction="column" px={40} pt={20}>
+          <Heading size="2xl" mb={10} color="gray.700">
+            Our Manifesto
+          </Heading>
+          <Box pl={16}>
+            <Accordeon
+              textAlign="left"
+              color="blue.500"
+              borderColor="blue.400"
+              items={[
+                {
+                  title:
+                    "Mapedia is a Crowdsourced Learning Map, designed to help people learn seamlessly",
+                  bulletPoints: [
+                    "Leveraging the latest technologies, we index any kind of learning material in a representation of all knowledge in order to serve them at the right time to users",
+                    "We enable a new, visual, and custom-tailored way to learn that allows learners stay in control, whether pursuing knowledge with a precise goal in mind or exploring new topics out of curiosity",
+                    "We strive to build an accessible, all in one learning tool, removing as many blockers as possible - from the logistical ones to the motivational ones",
+                  ],
+                },
+                {
+                  title: "Mapedia's mission is to empower online learners",
+                  bulletPoints: [
+                    "Our impact = the number of people helped * weight of the impact per person",
+                    "We aim to make a platform able to help those, predominantly between the ages of 14-99, seeking a deeper, secondary level of knowledge growth",
+                  ],
+                },
+                {
+                  title: "Mapedia is Free",
+                  bulletPoints: [
+                    "No compromise on accessibility in exchange for profits: no paywalls from us, ever",
+                    "We recommend free learning materials (e.g. web courses) first",
+                    "By leveraging crowdsourcing, peer learning, and peer-based feedback, we aim to make traditionally paid education products and services available for free (e.g. cohort based courses, certifications)",
+                    "Our business model is transparent and will focus on helping learners find quality job offers and scouting for talent (at first, this might evolve)",
+                  ],
+                },
+                {
+                  title: "Mapedia is Open Source & Unbiased",
+                  bulletPoints: [
+                    "No affiliated links",
+                    "A transparent recommendation engine - checkout our code :)",
+                    "We aim to recommend what’s best for the learners - not what’s more profitable for us",
+                  ],
+                },
+                {
+                  title: "Mapedia is limitless",
+                  bulletPoints: [
+                    "It is merely an accumulation of all knowledge and is endlessly expandable",
+                    "Any topic that can be learned online can be supported on Mapedia",
+                    "It adapts to the development of knowledge along with the current discourse and debates", // rephrase?
+                  ],
+                },
+                {
+                  title: "Mapedia is owned by the community",
+                  bulletPoints: [
+                    <Box>
+                      <Text>The Mapedia community will:</Text>
+                      <List>
+                        <ListItem>
+                          <ListIcon as={TiArrowRightOutline} color="teal.500" />
+                          Own the content and curation on Mapedia
+                        </ListItem>
+                        <ListItem>
+                          <ListIcon as={TiArrowRightOutline} color="teal.500" />
+                          Fuel the recommendation engine
+                        </ListItem>
+                        <ListItem>
+                          <ListIcon as={TiArrowRightOutline} color="teal.500" />
+                          Contribute to business and product decisions
+                        </ListItem>
+                      </List>
+                    </Box>,
+                    "10% of Mapedia's equity is reserved for the community",
+                    "User generated content such as concept explanations will be supported later on",
+                  ],
+                },
+                {
+                  title: "Mapedia is made for anyone, by everyone: join us now",
+                  bulletPoints: [
+                    <Text>
+                      We are in inclusive community,{" "}
+                      <Text as="span" fontWeight={600}>
+                        everyone
+                      </Text>{" "}
+                      is welcomed
+                    </Text>,
+                  ],
+                },
+              ]}
+            />
+          </Box>
+        </Flex>
+        <Flex direction="column" px={40} pt={20}>
+          <Heading size="2xl" mb={10} color="gray.700">
+            Follow our{" "}
+            <Text as="span" color="teal.600">
+              newsletter
+            </Text>
+          </Heading>
+          <Stack
+            flexDirection="column"
+            alignItems="center"
+            spacing={5}
+            bgColor="gray.100"
+            p={10}
+            borderRadius={20}
+            mx={20}
           >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter-ts`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
+            <Text
+              fontSize="lg"
+              fontStyle="italic"
+              textAlign="center"
+              px={10}
+              fontWeight={500}
+            >
+              Stay up to date with the development and future launch of Mapedia,
+              and be part of the early members of the community
+            </Text>
+            <Input
+              size="lg"
+              variant="outline"
+              placeholder="your@email.com"
+              w="60%"
+              maxW="700px"
+              minW="300px"
+              bgColor="white"
+            />
+            <Button size="lg" colorScheme="blue" w="300px">
+              Subscribe
+            </Button>
+          </Stack>
+        </Flex>
+      </Flex>
     </main>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
