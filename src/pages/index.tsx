@@ -4,6 +4,7 @@ import {
   Center,
   Flex,
   Heading,
+  Image,
   Input,
   List,
   ListIcon,
@@ -14,17 +15,34 @@ import {
 import { TiArrowRightOutline } from "@react-icons/all-files/ti/TiArrowRightOutline";
 import * as React from "react";
 import { Accordeon } from "../components/Accordeon";
+import { NewsletterSignup } from "../components/NewsletterSignup";
 
 const IndexPage = () => {
   return (
     <main>
-      <Flex w="100%" direction="column" alignItems="stretch" pb={200}>
+      <Flex
+        w="100%"
+        direction="column"
+        alignItems="stretch"
+        pb={200}
+        position="relative"
+      >
+        <Image
+          position="absolute"
+          zIndex={-1}
+          src="./static/topostain_teal.svg"
+          w={{ base: "360px", md: "340px" }}
+          opacity={0.5}
+          right={{ base: "10%", md: "10%" }}
+          top={{ base: "50px", md: "200px" }}
+        />
+        <Box h={4} bgColor="teal.600" />
         <Center pt={20}>
           <Heading size="4xl" color="teal.600">
             Mapedia.org
           </Heading>
         </Center>
-        <Flex direction="column" px={40} pt={20}>
+        <Flex direction="column" px={{ base: 4, lg: 40 }} pt={20}>
           <Heading size="2xl" mb={10} color="gray.700">
             Our Manifesto
           </Heading>
@@ -115,45 +133,15 @@ const IndexPage = () => {
             />
           </Box>
         </Flex>
-        <Flex direction="column" px={40} pt={20}>
+        <Flex direction="column" px={{ base: 4, lg: 40 }} pt={20}>
           <Heading size="2xl" mb={10} color="gray.700">
             Follow our{" "}
             <Text as="span" color="teal.600">
               newsletter
             </Text>
           </Heading>
-          <Stack
-            flexDirection="column"
-            alignItems="center"
-            spacing={5}
-            bgColor="gray.100"
-            p={10}
-            borderRadius={20}
-            mx={20}
-          >
-            <Text
-              fontSize="lg"
-              fontStyle="italic"
-              textAlign="center"
-              px={10}
-              fontWeight={500}
-            >
-              Stay up to date with the development and future launch of Mapedia,
-              and be part of the early members of the community
-            </Text>
-            <Input
-              size="lg"
-              variant="outline"
-              placeholder="your@email.com"
-              w="60%"
-              maxW="700px"
-              minW="300px"
-              bgColor="white"
-            />
-            <Button size="lg" colorScheme="blue" w="300px">
-              Subscribe
-            </Button>
-          </Stack>
+
+          <NewsletterSignup />
         </Flex>
       </Flex>
     </main>
