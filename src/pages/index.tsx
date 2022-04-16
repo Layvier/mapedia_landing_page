@@ -16,6 +16,8 @@ import { TiArrowRightOutline } from "@react-icons/all-files/ti/TiArrowRightOutli
 import * as React from "react";
 import { Accordeon } from "../components/Accordeon";
 import { NewsletterSignup } from "../components/NewsletterSignup";
+// @ts-ignore
+import TopostainTeal from "../images/topostain_teal.svg";
 
 const IndexPage = () => {
   return (
@@ -30,7 +32,8 @@ const IndexPage = () => {
         <Image
           position="absolute"
           zIndex={-1}
-          src="./static/topostain_teal.svg"
+          // src="./static/topostain_teal.svg"
+          src={TopostainTeal}
           w={{ base: "360px", md: "340px" }}
           opacity={0.5}
           right={{ base: "10%", md: "10%" }}

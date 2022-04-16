@@ -1,6 +1,4 @@
-import type { GatsbyConfig } from "gatsby";
-
-const config: GatsbyConfig = {
+module.exports = {
   siteMetadata: {
     title: `Mapedia.org`,
     siteUrl: `https://www.mapedia.org`,
@@ -28,7 +26,15 @@ const config: GatsbyConfig = {
     //   },
     // },
     "gatsby-plugin-react-helmet",
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
+      },
+    },
   ],
 };
-
-export default config;
