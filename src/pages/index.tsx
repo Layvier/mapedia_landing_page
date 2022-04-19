@@ -57,7 +57,7 @@ const IndexPage = () => {
               items={[
                 {
                   title:
-                    "Mapedia is a crowdsourced learning map, designed to help people learn seamlessly.",
+                    "Mapedia is a crowdsourced learning map, designed to help people learn seamlessly",
                   bulletPoints: [
                     "Leveraging the latest technologies, we index any kind of learning material in a representation of all knowledge in order to serve them at the right time to users",
                     "We enable a new, visual, and custom-tailored way to learn that allows learners stay in control, whether pursuing knowledge with a precise goal in mind or exploring new topics out of curiosity",
@@ -65,14 +65,14 @@ const IndexPage = () => {
                   ],
                 },
                 {
-                  title: "Mapedia's mission is to empower online learners.",
+                  title: "Mapedia's mission is to empower online learners",
                   bulletPoints: [
                     "Our impact = the number of people helped * weight of the impact per person",
                     "We aim to make a platform able to help those, predominantly between the ages of 14-99, seeking a deeper, secondary level of knowledge growth",
                   ],
                 },
                 {
-                  title: "Mapedia is free.",
+                  title: "Mapedia is free",
                   bulletPoints: [
                     "No compromise on accessibility in exchange for profits: no paywalls from us, ever",
                     "We recommend free learning materials (e.g. web courses) first",
@@ -81,7 +81,7 @@ const IndexPage = () => {
                   ],
                 },
                 {
-                  title: "Mapedia is open source & unbiased.",
+                  title: "Mapedia is open source & unbiased",
                   bulletPoints: [
                     "No affiliated links",
                     "A transparent recommendation engine - checkout our code :)",
@@ -89,7 +89,7 @@ const IndexPage = () => {
                   ],
                 },
                 {
-                  title: "Mapedia is flexible & expandable.",
+                  title: "Mapedia is flexible & expandable",
                   bulletPoints: [
                     "It is merely an accumulation of all knowledge and is endlessly expandable",
                     "Any topic that can be learned online can be supported on Mapedia",
@@ -120,7 +120,8 @@ const IndexPage = () => {
                   ],
                 },
                 {
-                  title: "Mapedia is made for anyone, by everyone: join us now",
+                  title:
+                    "Mapedia is made for anyone, by everyone: join us now!",
                   bulletPoints: [
                     <Text>
                       We are in inclusive community,{" "}
