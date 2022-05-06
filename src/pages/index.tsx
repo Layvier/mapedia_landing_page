@@ -78,14 +78,14 @@ const IndexPage = () => {
             >
               learning map
             </Link>{" "}
-            built collaboratively to support learners learn any topic
-            seamlessly. Wether exploring unknown areas of knowledge or wanting
+            built collaboratively to support learners learn to any topic
+            seamlessly. Whether exploring unknown areas of knowledge or wanting
             to learn something precise as fast as possible, Mapedia provides
-            guidance while letting the learner in control. It shows how concepts
-            are connected and where to learn them best. It is the best place to
-            get started learning anything, find the best learning materials,
-            figure out what to learn next or connect with other learners on the
-            same path as you.
+            guidance while leaving the learner in control. Our learning map
+            shows how concepts are connected and where to learn them best.
+            Mapedia is the best place to get started learning anything, find the
+            best learning materials, figure out what to learn next or connect
+            with other learners on the same path as you.
             <br />
             <br />
             <Text as="span" fontWeight={600}>
