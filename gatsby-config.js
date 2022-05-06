@@ -50,5 +50,12 @@ module.exports = {
       },
     },
     "gatsby-plugin-offline",
+    {
+      resolve: `gatsby-plugin-plausible`,
+      options: {
+        domain: `mapedia.org`,
+        customDomain: `analytics.sci-map.org/js/plausible.js?original=`,
+      },
+    },
   ],
 };
