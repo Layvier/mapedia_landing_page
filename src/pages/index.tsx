@@ -46,8 +46,8 @@ const IndexPage = () => {
         />
         <Box h={4} bgColor="teal.600" />
         <Center pt={20} flexDirection="row">
-          <Image src={Logo} w={{ base: "360px", md: "340px" }} />
-          <Heading size="4xl" color="teal.600">
+          <Image src={Logo} w={{ base: "140px", md: "340px" }} />
+          <Heading size="4xl" color="teal.600" mr={{ base: 4, md: 16 }}>
             Mapedia.org
           </Heading>
         </Center>
