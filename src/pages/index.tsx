@@ -22,6 +22,8 @@ import { YoutubePlayer } from "../components/YoutubePlayer";
 import TopostainTeal from "../images/topostain_teal.svg";
 // @ts-ignore
 import Logo from "../images/logo.svg";
+// @ts-ignore
+import Favicon from "../images/favicon.svg";
 
 const IndexPage = () => {
   return (
@@ -44,15 +46,7 @@ const IndexPage = () => {
         />
         <Box h={4} bgColor="teal.600" />
         <Center pt={20} flexDirection="row">
-          <Image
-            // position="absolute"
-            // bgColor="blue.100"
-            zIndex={-1}
-            src={Logo}
-            w={{ base: "360px", md: "340px" }}
-            left={{ base: "10%", md: "10%" }}
-            top={{ base: "50px", md: "200px" }}
-          />
+          <Image src={Logo} w={{ base: "360px", md: "340px" }} />
           <Heading size="4xl" color="teal.600">
             Mapedia.org
           </Heading>
@@ -92,6 +86,11 @@ const IndexPage = () => {
             get started learning anything, find the best learning materials,
             figure out what to learn next or connect with other learners on the
             same path as you.
+            <br />
+            <br />
+            <Text as="span" fontWeight={600}>
+              Stay tuned, we're launching this summer;)
+            </Text>
           </Text>
         </Center>
         <Section

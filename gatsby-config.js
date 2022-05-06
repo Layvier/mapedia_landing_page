@@ -36,5 +36,19 @@ module.exports = {
         ignore: [`**/\.*`], // ignore files starting with a dot
       },
     },
+
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Mapedia.org`,
+        short_name: `Mapedia`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `src/images/favicon.svg`,
+      },
+    },
+    "gatsby-plugin-offline",
   ],
 };
