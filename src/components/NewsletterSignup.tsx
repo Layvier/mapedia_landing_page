@@ -64,10 +64,14 @@ export const NewsletterSignup: React.FC<{}> = () => {
         flexDirection="column"
         alignItems="center"
         spacing={5}
-        bgColor="gray.100"
-        p={10}
+        bgColor="gray.50"
+        borderWidth={1}
+        borderColor="blue.500"
+        py={10}
+        px={{ base: 4, md: 10 }}
         borderRadius={20}
-        mx={20}
+        boxShadow="xl"
+        // mx={20}
       >
         <Text
           fontSize="lg"

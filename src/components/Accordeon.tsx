@@ -82,7 +82,7 @@ export const Accordeon: React.FC<AccordeonProps> = ({
           >
             <List spacing={3}>
               {bulletPoints.map((bulletPoint, idx) => (
-                <ListItem pl={5} key={idx}>
+                <ListItem pl={5} key={idx} maxW="800px">
                   <Flex>
                     <ListIcon
                       as={TiArrowRightOutline}
