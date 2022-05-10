@@ -22,8 +22,6 @@ import { YoutubePlayer } from "../components/YoutubePlayer";
 import TopostainTeal from "../images/topostain_teal.svg";
 // @ts-ignore
 import Logo from "../images/logo.svg";
-// @ts-ignore
-import Favicon from "../images/favicon.svg";
 
 const IndexPage = () => {
   return (
@@ -45,9 +43,12 @@ const IndexPage = () => {
           top={{ base: "50px", md: "200px" }}
         />
         <Box h={4} bgColor="teal.600" />
-        <Center pt={20} flexDirection="row">
-          <Image src={Logo} w={{ base: "140px", md: "340px" }} />
-          <Heading size="4xl" color="teal.600" mr={{ base: 4, md: 16 }}>
+        <Center
+          pt={{ base: 3, md: 20 }}
+          flexDirection={{ base: "column", md: "row" }}
+        >
+          <Image src={Logo} w={{ base: "200px", md: "340px" }} />
+          <Heading size="4xl" color="teal.600" mr={{ base: 0, md: 16 }}>
             Mapedia.org
           </Heading>
         </Center>

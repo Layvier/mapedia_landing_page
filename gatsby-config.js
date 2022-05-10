@@ -19,12 +19,6 @@ module.exports = {
         isUsingColorMode: true,
       },
     },
-    // {
-    //   resolve: "gatsby-plugin-google-analytics",
-    //   options: {
-    //     trackingId: "",
-    //   },
-    // },
     "gatsby-plugin-react-helmet",
     `gatsby-plugin-sharp`,
     `gatsby-plugin-image`,
@@ -40,11 +34,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Mapedia.org`,
-        short_name: `Mapedia`,
+        name: `Mapedia.org - Explore. Learn. Grow.`,
+        short_name: `Mapedia.org`,
+        description: `Mapedia is a learning map built collectively to support learners learn to any topic seamlessly. Follow us, we're launching this summer;)`,
+        lang: `en`,
         start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
         display: `standalone`,
         icon: `src/images/favicon.svg`,
       },
