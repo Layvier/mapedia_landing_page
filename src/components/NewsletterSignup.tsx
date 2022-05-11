@@ -60,41 +60,30 @@ export const NewsletterSignup: React.FC<{}> = () => {
         }}
       ></iframe>
 
-      <Stack
-        flexDirection="column"
-        alignItems="center"
-        spacing={5}
-        bgColor="gray.50"
-        borderWidth={1}
-        borderColor="blue.500"
-        py={10}
-        px={{ base: 4, md: 10 }}
-        borderRadius={20}
-        boxShadow="xl"
-        // mx={20}
-      >
+      <Stack flexDirection="column" alignItems="stretch" spacing={10}>
         <Text
-          fontSize="lg"
-          fontStyle="italic"
-          textAlign="center"
-          px={10}
+          // fontSize="lg"
+          // fontStyle="italic"
+          // textAlign="center"
+          fontSize="20px"
           fontWeight={500}
         >
           Stay up to date with the development and future launch of Mapedia, and
           be part of the early members of the community
         </Text>
         {!status && (
-          <Stack
-            w="60%"
-            maxW="700px"
-            minW="300px"
-            alignItems="center"
-            spacing={4}
+          <Flex
+            direction="row"
+            alignItems="stretch"
+            justifyContent="space-between"
           >
             <Input
               aria-label="email"
               type="email"
-              size="lg"
+              size="xl"
+              w="64%"
+              borderColor="primary"
+              borderWidth={2}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               variant="outline"
@@ -104,15 +93,17 @@ export const NewsletterSignup: React.FC<{}> = () => {
             />
 
             <Button
-              colorScheme="blue"
-              size="lg"
-              w="300px"
+              colorScheme="teal"
+              bgColor="primary"
+              size="xl"
+              w="34%"
+              minW="100px"
               onClick={() => send()}
               disabled={!email || !emailIsValid}
             >
               Subscribe
             </Button>
-          </Stack>
+          </Flex>
         )}
         {status === "success" && (
           <Alert status="success">

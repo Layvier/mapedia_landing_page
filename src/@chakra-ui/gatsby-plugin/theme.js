@@ -11,6 +11,11 @@ export const fonts = {
 
 export const theme = extendTheme({
   colors: {
+    background: "#353535", // dark
+    primary: "#38B2AC", // teal
+    secondary: "#4299E1", // blue
+    tertiary: "#FFA058", // orange
+    bodyColor: "#303030",
     gray: {
       50: "#FFFFFF",
       100: "#F1F1F1",
@@ -36,6 +41,35 @@ export const theme = extendTheme({
   fonts: {
     heading: fonts.helvetica,
     body: fonts.helvetica,
+  },
+  components: {
+    Button: {
+      sizes: {
+        xl: {
+          h: "60px",
+          fontSize: "xl",
+          px: "32px",
+        },
+      },
+    },
+    Input: {
+      sizes: {
+        xl: {
+          field: {
+            fontSize: "xl",
+            px: 5,
+            h: "60px",
+            borderRadius: "lg",
+          },
+          addon: {
+            fontSize: "xl",
+            px: 6,
+            h: "60px",
+            borderRadius: "lg",
+          },
+        },
+      },
+    },
   },
 });
 
