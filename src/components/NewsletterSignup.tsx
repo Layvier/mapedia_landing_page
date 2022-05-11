@@ -6,6 +6,7 @@ import {
   Input,
   Stack,
   Text,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import React, { useMemo, useState } from "react";
 
@@ -19,6 +20,11 @@ const validateEmail = (email: string): boolean => {
 export const NewsletterSignup: React.FC<{}> = () => {
   const [status, setStatus] = useState<"success" | "error" | null>(null);
   const [email, setEmail] = useState("");
+
+  const responsiveBtnInputSize = useBreakpointValue({
+    base: "lg",
+    sm: "xl",
+  });
 
   const emailIsValid = useMemo(() => {
     return validateEmail(email);
@@ -60,12 +66,14 @@ export const NewsletterSignup: React.FC<{}> = () => {
         }}
       ></iframe>
 
-      <Stack flexDirection="column" alignItems="stretch" spacing={10}>
+      <Stack
+        flexDirection="column"
+        alignItems="stretch"
+        spacing={{ base: 6, sm: 10 }}
+      >
         <Text
-          // fontSize="lg"
-          // fontStyle="italic"
-          // textAlign="center"
-          fontSize="20px"
+          textAlign={{ base: "center", sm: "left" }}
+          fontSize={{ base: "18px", sm: "20px" }}
           fontWeight={500}
         >
           Stay up to date with the development and future launch of Mapedia, and
@@ -80,7 +88,7 @@ export const NewsletterSignup: React.FC<{}> = () => {
             <Input
               aria-label="email"
               type="email"
-              size="xl"
+              size={responsiveBtnInputSize} //{{ base: "lg", sm: "xl" }}
               w={{ sm: "64%" }}
               borderColor="primary"
               borderWidth={2}
@@ -96,7 +104,7 @@ export const NewsletterSignup: React.FC<{}> = () => {
             <Button
               colorScheme="teal"
               bgColor="primary"
-              size="xl"
+              size={responsiveBtnInputSize} //{{ base: "lg", sm: "xl" }}
               w={{ sm: "34%" }}
               minW="100px"
               onClick={() => send()}

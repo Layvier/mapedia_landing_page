@@ -63,7 +63,11 @@ const IndexPage = () => {
           top={{ base: "160px", md: "0px", lg: "-40px" }}
         />
       </Box>
-      <Flex pt={{ base: 28, md: 32, lg: 40 }} minH="100vh" pb={24}>
+      <Flex
+        pt={{ base: 28, md: 32, lg: 40 }}
+        minH={{ base: "86vh", sm: "100vh" }}
+        pb={24}
+      >
         <Stack direction="column" spacing={{ base: 2, md: 4 }} zIndex={1}>
           <Heading
             fontSize={{ base: "58px", md: "110px", lg: "140px" }}
@@ -146,7 +150,7 @@ const IndexPage = () => {
         <Text
           mt={6}
           textAlign="center"
-          fontSize="20px"
+          fontSize={{ base: "15px", md: "20px" }}
           fontWeight={500}
           color="bodyColor"
         >
@@ -337,7 +341,7 @@ const IndexPage = () => {
           </>
         }
       >
-        <Wrap spacing={{ base: "40px", md: "100px" }}>
+        <Wrap spacing={{ base: "20px", sm: "30px", md: "100px" }}>
           <WrapItem>
             <CommunityLink
               href="https://sci-map.org/"
@@ -370,9 +374,9 @@ const IndexPage = () => {
                 position="absolute"
                 zIndex={0}
                 src={DotsCheckmark}
-                // w={{ base: "800px", md: "800px" }}
-                right={{ base: "-30%", md: "-70%" }}
-                top={{ base: "-140px", md: "-90px" }}
+                w={{ base: "100px", md: "150px" }}
+                right={{ base: "-25%", md: "-60%" }}
+                top={{ base: "-77px", md: "-90px" }}
               />
               Newsletter
             </Text>
@@ -410,7 +414,11 @@ const Section: React.FC<
 > = ({ title, children, ...props }) => {
   return (
     <Flex direction="column" zIndex={1} mt={{ base: 28, md: 52 }} {...props}>
-      <Heading size="2xl" mb={{ base: 10, md: 16 }} color="white">
+      <Heading
+        fontSize={{ base: "3xl", sm: "4xl", md: "5xl" }}
+        mb={{ base: 10, md: 16 }}
+        color="white"
+      >
         {title}
       </Heading>
 
@@ -429,13 +437,15 @@ const CommunityLink: React.FC<{
       <Stack
         direction="row"
         borderRadius={28}
-        px={5}
-        py={2}
+        pl={{ base: 3, md: 5 }}
+        pr={{ base: "12px", md: 5 }}
+        py={{ base: "6px", md: 3 }}
         alignItems="center"
-        fontSize="3xl"
+        fontSize={{ base: "lg", md: "3xl" }}
         fontWeight={600}
         bgColor="tertiary"
         color="white"
+        spacing={{ base: 1, md: 2 }}
       >
         {icon}
         <Text as="span">{text}</Text>
