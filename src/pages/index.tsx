@@ -4,6 +4,7 @@ import {
   Flex,
   FlexProps,
   Heading,
+  IconButton,
   Image,
   Link,
   LinkProps,
@@ -19,6 +20,7 @@ import { RiGithubFill } from "@react-icons/all-files/ri/RiGithubFill";
 import { RiTwitterLine } from "@react-icons/all-files/ri/RiTwitterLine";
 import { TiArrowRightOutline } from "@react-icons/all-files/ti/TiArrowRightOutline";
 import * as React from "react";
+import { Link as ScrollLink } from "react-scroll";
 import { Accordeon } from "../components/Accordeon";
 import { NewsletterSignup } from "../components/NewsletterSignup";
 import { YoutubePlayer } from "../components/YoutubePlayer";
@@ -32,6 +34,11 @@ import TopostainTeal from "../images/topostain_teal.svg";
 import DotsCheckmark from "../images/dots_checkmark.svg";
 // @ts-ignore
 import Logo from "../images/logo.svg";
+import { ArrowDownIcon } from "@chakra-ui/icons";
+import { scrollTo } from "react-scroll/modules/mixins/scroller";
+import Scroll from "react-scroll";
+const { Element } = Scroll;
+const { scroller } = Scroll;
 
 const BORDER_RADIUS = 40;
 
@@ -43,7 +50,6 @@ const IndexPage = () => {
       w="100%"
       direction="column"
       alignItems="stretch"
-      // position="relative"
       px={20}
     >
       <Flex pt={40} minH="100vh" pb={24}>
@@ -74,7 +80,54 @@ const IndexPage = () => {
         />
       </Flex>
 
-      <Block direction="column" alignItems="center" zIndex={1}>
+      <Block
+        direction="column"
+        alignItems="center"
+        zIndex={1}
+        position="relative"
+        id="intro"
+      >
+        <Link
+          position="absolute"
+          top="-80px"
+          _hover={{}}
+          _active={{}}
+          _focus={{}}
+          left="50%"
+          fontWeight={500}
+          transform="translate(-50%,0)"
+          color="white"
+          fontSize="32px"
+          onClick={() =>
+            scroller.scrollTo("intro", {
+              smooth: true,
+              duration: 600,
+            })
+          }
+        >
+          Learn more
+        </Link>
+        <IconButton
+          position="absolute"
+          top={0}
+          left="50%"
+          transform="translate(-50%, -50%)"
+          aria-label="Learn more"
+          bgColor="secondary"
+          onClick={() =>
+            scroller.scrollTo("intro", {
+              smooth: true,
+              duration: 600,
+            })
+          }
+          _hover={{ bgColor: "blue.500" }}
+          _active={{}}
+          _focus={{}}
+          icon={<ArrowDownIcon boxSize={7} />}
+          size="lg"
+          color="white"
+          isRound
+        />
         <Heading fontSize="50px" color="primary">
           What's Mapedia?
         </Heading>
@@ -300,7 +353,7 @@ const IndexPage = () => {
                 zIndex={0}
                 src={DotsCheckmark}
                 // w={{ base: "800px", md: "800px" }}
-                right={{ base: "-100px", md: "-80%" }}
+                right={{ base: "-100px", md: "-70%" }}
                 top={{ base: "50px", md: "-90px" }}
               />
               Newsletter
