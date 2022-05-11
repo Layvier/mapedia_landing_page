@@ -20,7 +20,6 @@ import { RiGithubFill } from "@react-icons/all-files/ri/RiGithubFill";
 import { RiTwitterLine } from "@react-icons/all-files/ri/RiTwitterLine";
 import { TiArrowRightOutline } from "@react-icons/all-files/ti/TiArrowRightOutline";
 import * as React from "react";
-import { Link as ScrollLink } from "react-scroll";
 import { Accordeon } from "../components/Accordeon";
 import { NewsletterSignup } from "../components/NewsletterSignup";
 import { YoutubePlayer } from "../components/YoutubePlayer";
@@ -169,7 +168,7 @@ const IndexPage = () => {
             >
               learning map
             </Link>{" "}
-            built collaboratively to support learners learn to any topic
+            built collaboratively to support learners to learn any topic
             seamlessly. Whether exploring unknown areas of knowledge or wanting
             to learn something precise as fast as possible, Mapedia provides
             guidance while leaving the learner in control. Our learning map
