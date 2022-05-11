@@ -73,7 +73,7 @@ export const NewsletterSignup: React.FC<{}> = () => {
         </Text>
         {!status && (
           <Flex
-            direction="row"
+            direction={{ base: "column", sm: "row" }}
             alignItems="stretch"
             justifyContent="space-between"
           >
@@ -81,7 +81,7 @@ export const NewsletterSignup: React.FC<{}> = () => {
               aria-label="email"
               type="email"
               size="xl"
-              w="64%"
+              w={{ sm: "64%" }}
               borderColor="primary"
               borderWidth={2}
               value={email}
@@ -90,13 +90,14 @@ export const NewsletterSignup: React.FC<{}> = () => {
               placeholder="your@email.com"
               bgColor="white"
               isInvalid={!!email && !emailIsValid}
+              mb={{ base: 3, sm: 0 }}
             />
 
             <Button
               colorScheme="teal"
               bgColor="primary"
               size="xl"
-              w="34%"
+              w={{ sm: "34%" }}
               minW="100px"
               onClick={() => send()}
               disabled={!email || !emailIsValid}

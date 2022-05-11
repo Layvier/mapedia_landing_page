@@ -35,9 +35,7 @@ import DotsCheckmark from "../images/dots_checkmark.svg";
 // @ts-ignore
 import Logo from "../images/logo.svg";
 import { ArrowDownIcon } from "@chakra-ui/icons";
-import { scrollTo } from "react-scroll/modules/mixins/scroller";
 import Scroll from "react-scroll";
-const { Element } = Scroll;
 const { scroller } = Scroll;
 
 const BORDER_RADIUS = 40;
@@ -48,14 +46,15 @@ const IndexPage = () => {
       as="main"
       bgColor="background"
       w="100%"
+      overflow="clip"
       direction="column"
       alignItems="stretch"
-      px={20}
+      px={{ base: 3, md: 20 }}
     >
-      <Flex pt={40} minH="100vh" pb={24}>
-        <Stack direction="column" spacing={4} zIndex={1}>
+      <Flex pt={{ base: 28, md: 32, lg: 40 }} minH="100vh" pb={24}>
+        <Stack direction="column" spacing={{ base: 2, md: 4 }} zIndex={1}>
           <Heading
-            fontSize={{ base: "52px", md: "140px" }}
+            fontSize={{ base: "58px", md: "110px", lg: "140px" }}
             fontWeight={600}
             color="primary"
             as="h1"
@@ -63,8 +62,17 @@ const IndexPage = () => {
             Mapedia.org
           </Heading>
           <Stack direction="row" alignItems="center">
-            <Image src={Logo} w={{ base: "140px", md: "140px" }} ml="-12px" />
-            <Heading as="h2" color="white" fontWeight={400} fontSize="50px">
+            <Image
+              src={Logo}
+              w={{ base: "100px", md: "120px", lg: "140px" }}
+              ml="-12px"
+            />
+            <Heading
+              as="h2"
+              color="white"
+              fontWeight={400}
+              fontSize={{ base: "26px", md: "40px", lg: "50px" }}
+            >
               Explore. Learn. Grow
             </Heading>
           </Stack>
@@ -73,10 +81,10 @@ const IndexPage = () => {
           position="absolute"
           zIndex={0}
           src={TopostainHeader}
-          w={{ base: "960px", md: "960px" }}
+          w={{ base: "800px", md: "960px" }}
           opacity={1}
-          right={{ base: "-10%", md: "-18%" }}
-          top={{ base: "50px", md: "-2%" }}
+          right={{ base: "-30%", md: "-30%", lg: "-18%" }}
+          top={{ base: "200px", md: "0%", lg: "-2%" }}
         />
       </Flex>
 
@@ -128,7 +136,7 @@ const IndexPage = () => {
           color="white"
           isRound
         />
-        <Heading fontSize="50px" color="primary">
+        <Heading fontSize={{ base: "30px", md: "50px" }} color="primary">
           What's Mapedia?
         </Heading>
         <Text
@@ -174,11 +182,17 @@ const IndexPage = () => {
           Stay tuned, we're launching this summer ;)
         </Text>
         <Center mt={16}>
-          <YoutubePlayer
-            videoUrl="https://www.youtube.com/watch?v=9GC7evh2gP4"
-            w="900px"
-            skipThumbnail
-          />
+          <Box
+            w={{ base: "300px", sm: "400px", md: "500px", lg: "600px" }}
+            h={{ base: "200px", sm: "280px", md: "340px", lg: "400px" }}
+          >
+            <YoutubePlayer
+              videoUrl="https://www.youtube.com/watch?v=9GC7evh2gP4"
+              w="100%"
+              h="100%"
+              skipThumbnail
+            />
+          </Box>
         </Center>
       </Block>
       <Box position="relative">
@@ -186,10 +200,10 @@ const IndexPage = () => {
           position="absolute"
           zIndex={0}
           src={TopostainBlue}
-          w={{ base: "800px", md: "800px" }}
+          w={{ base: "600px", md: "800px" }}
           opacity={1}
-          left={{ base: "-400px", md: "-400px" }}
-          top={{ base: "50px", md: "-300px" }}
+          left={{ base: "-200px", md: "-400px" }}
+          top={{ base: "-200px", md: "-300px" }}
         />
       </Box>
       <Section
@@ -305,8 +319,8 @@ const IndexPage = () => {
           src={TopostainTeal}
           w={{ base: "800px", md: "800px" }}
           opacity={1}
-          right={{ base: "-400px", md: "-200px" }}
-          top={{ base: "50px", md: "-200px" }}
+          right={{ base: "-200px", md: "-200px" }}
+          top={{ base: "-120px", md: "-200px" }}
         />
       </Box>
       <Section
@@ -353,8 +367,8 @@ const IndexPage = () => {
                 zIndex={0}
                 src={DotsCheckmark}
                 // w={{ base: "800px", md: "800px" }}
-                right={{ base: "-100px", md: "-70%" }}
-                top={{ base: "50px", md: "-90px" }}
+                right={{ base: "-30%", md: "-70%" }}
+                top={{ base: "-140px", md: "-90px" }}
               />
               Newsletter
             </Text>
@@ -431,8 +445,8 @@ const Block: React.FC<FlexProps> = ({ children, ...props }) => {
     <Flex
       bgColor="white"
       borderRadius={BORDER_RADIUS}
-      py="100px"
-      px="155px"
+      py={{ base: "50px", md: "70px", lg: "100px" }}
+      px={{ base: "40px", md: "100px", lg: "155px" }}
       {...props}
     >
       {children}
