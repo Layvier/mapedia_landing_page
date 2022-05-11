@@ -46,11 +46,23 @@ const IndexPage = () => {
       as="main"
       bgColor="background"
       w="100%"
-      overflow="clip"
+      maxW="100%"
+      overflow="hidden"
       direction="column"
       alignItems="stretch"
       px={{ base: 3, md: 20 }}
     >
+      <Box position="relative">
+        <Image
+          position="absolute"
+          zIndex={0}
+          src={TopostainHeader}
+          w={{ base: "800px", md: "960px" }}
+          opacity={1}
+          right={{ base: "-30%", md: "-30%", lg: "-18%" }}
+          top={{ base: "200px", md: "0%", lg: "-2%" }}
+        />
+      </Box>
       <Flex pt={{ base: 28, md: 32, lg: 40 }} minH="100vh" pb={24}>
         <Stack direction="column" spacing={{ base: 2, md: 4 }} zIndex={1}>
           <Heading
@@ -65,6 +77,7 @@ const IndexPage = () => {
             <Image
               src={Logo}
               w={{ base: "100px", md: "120px", lg: "140px" }}
+              h={{ base: "83px", md: "100px", lg: "123px" }}
               ml="-12px"
             />
             <Heading
@@ -77,15 +90,6 @@ const IndexPage = () => {
             </Heading>
           </Stack>
         </Stack>
-        <Image
-          position="absolute"
-          zIndex={0}
-          src={TopostainHeader}
-          w={{ base: "800px", md: "960px" }}
-          opacity={1}
-          right={{ base: "-30%", md: "-30%", lg: "-18%" }}
-          top={{ base: "200px", md: "0%", lg: "-2%" }}
-        />
       </Flex>
 
       <Block
@@ -379,7 +383,7 @@ const IndexPage = () => {
           <NewsletterSignup />
         </Block>
       </Section>
-      <Center py={32}>
+      <Center pt={40} pb={24}>
         <Stack direction="row" alignItems="center" spacing={6}>
           <Text color="primary" fontWeight={500} fontSize="lg">
             © 2022 Mapedia.org
