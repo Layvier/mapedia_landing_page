@@ -1,11 +1,9 @@
-import { ChakraProvider } from "@chakra-ui/react";
 import * as React from "react";
-import { theme } from "./theme";
 import { Helmet } from "react-helmet";
 
 export const Wrapper: React.FC<{}> = ({ children }) => {
   return (
-    <ChakraProvider theme={theme}>
+    <>
       <Helmet>
         <title>Mapedia.org - Explore. Learn. Grow.</title>
         <meta
@@ -14,6 +12,6 @@ export const Wrapper: React.FC<{}> = ({ children }) => {
         />
       </Helmet>
       {children}
-    </ChakraProvider>
+    </>
   );
 };

@@ -1,10 +1,13 @@
 import { extendTheme } from "@chakra-ui/react";
+// const theme = {
+//   colors: {
+//     primary: "rebeccapurple",
+//   },
+// }
 
-// export const fonts = {
-//   bebasNeue: "Bebas Neue",
-//   spartan: "Spartan,Roboto,Open Sans",
-//   raleway: "Raleway,Avenir,Roboto,Open Sans",
-// };
+export const fonts = {
+  helvetica: "Helvetica Neue, Helvetica, Arial, sans-serif",
+};
 
 export const theme = extendTheme({
   colors: {
@@ -29,16 +32,11 @@ export const theme = extendTheme({
       900: "#0E0E0E",
       950: "#000000",
     },
-    // black: '#000000ff',
-    onyx: "#363946ff",
-    "dim-gray": "#696773ff",
-    "sonic-silver": "#777580ff",
-    almond: "#dac6b5ff",
-    "baby-blue-eyes": "#a4bef3ff",
-    opal: "#92b6b1ff",
   },
-  //   fonts: {
-  //     heading: fonts.spartan,
-  //     body: fonts.raleway,
-  //   },
+  fonts: {
+    heading: fonts.helvetica,
+    body: fonts.helvetica,
+  },
 });
+
+export default theme;
