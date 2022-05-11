@@ -147,41 +147,43 @@ const IndexPage = () => {
         <Heading fontSize={{ base: "30px", md: "50px" }} color="primary">
           What's Mapedia?
         </Heading>
-        <Text
-          mt={6}
+        <Flex
+          mt={8}
+          direction="column"
           textAlign="center"
           fontSize={{ base: "15px", md: "20px" }}
           fontWeight={500}
           color="bodyColor"
         >
-          Mapedia, an evolution of{" "}
-          <Link href="https://sci-map.org" isExternal color="secondary">
-            Sci-Map.org
-          </Link>
-          , is a new kind of learning platform at the crossroad between
-          Wikipedia, Google Maps and Khan Academy: a{" "}
-          <Link
-            href="https://www.youtube.com/watch?v=wKcZ8ozCah0"
-            color="secondary"
-            isExternal
-          >
-            learning map
-          </Link>{" "}
-          built collaboratively to support learners learn to any topic
-          seamlessly. Whether exploring unknown areas of knowledge or wanting to
-          learn something precise as fast as possible, Mapedia provides guidance
-          while leaving the learner in control. Our learning map shows how
-          concepts are connected and where to learn them best.
-          <br />
-          <br />
-          <br />
-          Mapedia is the best place to get started learning anything, find the
-          best learning materials, figure out what to learn next or connect with
-          other learners on the same path as you.
-        </Text>
+          <Text>
+            Mapedia, an evolution of{" "}
+            <Link href="https://sci-map.org" isExternal color="secondary">
+              Sci-Map.org
+            </Link>
+            , is a new kind of learning platform at the crossroad between
+            Wikipedia, Google Maps and Khan Academy: a{" "}
+            <Link
+              href="https://www.youtube.com/watch?v=wKcZ8ozCah0"
+              color="secondary"
+              isExternal
+            >
+              learning map
+            </Link>{" "}
+            built collaboratively to support learners learn to any topic
+            seamlessly. Whether exploring unknown areas of knowledge or wanting
+            to learn something precise as fast as possible, Mapedia provides
+            guidance while leaving the learner in control. Our learning map
+            shows how concepts are connected and where to learn them best.
+          </Text>
+          <Text mt={8}>
+            Mapedia is the best place to get started learning anything, find the
+            best learning materials, figure out what to learn next or connect
+            with other learners on the same path as you.
+          </Text>
+        </Flex>
 
         <Text
-          mt={6}
+          mt={8}
           textAlign="center"
           fontSize="20px"
           fontWeight={600}
@@ -189,7 +191,7 @@ const IndexPage = () => {
         >
           Stay tuned, we're launching this summer ;)
         </Text>
-        <Center mt={16}>
+        <Center mt={12}>
           <Box
             w={{ base: "300px", sm: "400px", md: "500px", lg: "600px" }}
             h={{ base: "200px", sm: "280px", md: "340px", lg: "400px" }}
@@ -341,7 +343,7 @@ const IndexPage = () => {
           </>
         }
       >
-        <Wrap spacing={{ base: "20px", sm: "30px", md: "100px" }}>
+        <Wrap spacing={{ base: "20px", sm: "30px", md: "60px", lg: "90px" }}>
           <WrapItem>
             <CommunityLink
               href="https://sci-map.org/"
@@ -375,8 +377,8 @@ const IndexPage = () => {
                 zIndex={0}
                 src={DotsCheckmark}
                 w={{ base: "100px", md: "150px" }}
-                right={{ base: "-25%", md: "-60%" }}
-                top={{ base: "-77px", md: "-90px" }}
+                right={{ base: "-25%", md: "-75%", lg: "-50%" }}
+                top={{ base: "-77px", md: "-110px", lg: "-90px" }}
               />
               Newsletter
             </Text>
@@ -415,7 +417,7 @@ const Section: React.FC<
   return (
     <Flex direction="column" zIndex={1} mt={{ base: 28, md: 52 }} {...props}>
       <Heading
-        fontSize={{ base: "3xl", sm: "4xl", md: "5xl" }}
+        fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
         mb={{ base: 10, md: 16 }}
         color="white"
       >
@@ -437,15 +439,15 @@ const CommunityLink: React.FC<{
       <Stack
         direction="row"
         borderRadius={28}
-        pl={{ base: 3, md: 5 }}
-        pr={{ base: "12px", md: 5 }}
-        py={{ base: "6px", md: 3 }}
+        pl={{ base: 3, md: 4, lg: 5 }}
+        pr={{ base: "12px", md: "16px", lg: 5 }}
+        py={{ base: "6px", md: "7px", lg: "9px" }}
         alignItems="center"
-        fontSize={{ base: "lg", md: "3xl" }}
+        fontSize={{ base: "lg", md: "xl", lg: "3xl" }}
         fontWeight={600}
         bgColor="tertiary"
         color="white"
-        spacing={{ base: 1, md: 2 }}
+        spacing={{ base: 1, md: "6px", lg: 2 }}
       >
         {icon}
         <Text as="span">{text}</Text>
