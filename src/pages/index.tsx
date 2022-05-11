@@ -57,10 +57,10 @@ const IndexPage = () => {
           position="absolute"
           zIndex={0}
           src={TopostainHeader}
-          w={{ base: "800px", md: "960px" }}
+          w={{ base: "800px", md: "850px", lg: "920px" }}
           opacity={1}
-          right={{ base: "-30%", md: "-30%", lg: "-18%" }}
-          top={{ base: "200px", md: "0%", lg: "-2%" }}
+          right={{ base: "-30%", md: "-30%", lg: "-260px" }}
+          top={{ base: "160px", md: "0px", lg: "-40px" }}
         />
       </Box>
       <Flex pt={{ base: 28, md: 32, lg: 40 }} minH="100vh" pb={24}>
@@ -84,9 +84,9 @@ const IndexPage = () => {
               as="h2"
               color="white"
               fontWeight={400}
-              fontSize={{ base: "26px", md: "40px", lg: "50px" }}
+              fontSize={{ base: "30px", md: "40px", lg: "50px" }}
             >
-              Explore. Learn. Grow
+              Explore. Learn. Grow.
             </Heading>
           </Stack>
         </Stack>
@@ -101,7 +101,7 @@ const IndexPage = () => {
       >
         <Link
           position="absolute"
-          top="-80px"
+          top={{ base: "-70px", md: "-80px" }}
           _hover={{}}
           _active={{}}
           _focus={{}}
@@ -109,7 +109,7 @@ const IndexPage = () => {
           fontWeight={500}
           transform="translate(-50%,0)"
           color="white"
-          fontSize="32px"
+          fontSize={{ base: "24px", md: "32px" }}
           onClick={() =>
             scroller.scrollTo("intro", {
               smooth: true,
@@ -409,8 +409,8 @@ const Section: React.FC<
   { title: React.ReactNode | string } & Omit<FlexProps, "title">
 > = ({ title, children, ...props }) => {
   return (
-    <Flex direction="column" zIndex={1} mt={52} {...props}>
-      <Heading size="2xl" mb={16} color="white">
+    <Flex direction="column" zIndex={1} mt={{ base: 28, md: 52 }} {...props}>
+      <Heading size="2xl" mb={{ base: 10, md: 16 }} color="white">
         {title}
       </Heading>
 
