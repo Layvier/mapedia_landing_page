@@ -74,7 +74,7 @@ export const NewsletterSignup: React.FC<{}> = () => {
         <Text
           textAlign={{ base: "center", sm: "left" }}
           fontSize={{ base: "18px", sm: "20px" }}
-          fontWeight={500}
+          fontWeight={600}
         >
           Stay up to date with the development and future launch of Mapedia, and
           be part of the early members of the community

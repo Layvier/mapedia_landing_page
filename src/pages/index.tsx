@@ -264,7 +264,7 @@ const IndexPage = () => {
                   <>
                     A transparent recommendation engine - checkout our{" "}
                     <Link
-                      href="https://github.com/sci-map-org/"
+                      href="https://github.com/Mapedia-org/"
                       color="blue.600"
                     >
                       code
@@ -345,7 +345,7 @@ const IndexPage = () => {
         <Wrap spacing={{ base: "20px", sm: "30px", md: "60px", lg: "90px" }}>
           <WrapItem>
             <CommunityLink
-              href="https://sci-map.org/"
+              href="https://beta.mapedia.org/"
               text="Beta"
               icon={<Text>β</Text>}
             />
@@ -359,7 +359,7 @@ const IndexPage = () => {
           </WrapItem>
           <WrapItem>
             <CommunityLink
-              href="https://github.com/sci-map-org/"
+              href="https://github.com/Mapedia-org/"
               text="Github"
               icon={<RiGithubFill fontSize="1.1em" />}
             />
