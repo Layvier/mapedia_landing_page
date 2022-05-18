@@ -245,7 +245,7 @@ const IndexPage = () => {
                 title: "Mapedia's mission is to empower online learners",
                 bulletPoints: [
                   "Our impact = the number of people helped * weight of the impact per person",
-                  "We aim to make a platform able to help those, predominantly between the ages of 14-99, seeking a deeper, secondary level of knowledge growth",
+                  "We aim to make a platform able to help any web user seeking a deeper, secondary level of knowledge growth",
                 ],
               },
               {
@@ -309,7 +309,7 @@ const IndexPage = () => {
                 title: "Mapedia is made for anyone, by everyone: join us now!",
                 bulletPoints: [
                   <Text>
-                    We are in inclusive community,{" "}
+                    We are an inclusive community,{" "}
                     <Text as="span" fontWeight={600}>
                       everyone
                     </Text>{" "}
