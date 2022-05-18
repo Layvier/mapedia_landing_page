@@ -251,7 +251,13 @@ const IndexPage = () => {
               {
                 title: "Mapedia is free",
                 bulletPoints: [
-                  "No compromise on accessibility in exchange for profits: no paywalls from us, ever",
+                  <>
+                    "No compromise on accessibility in exchange for profits: no
+                    paywalls from us,{" "}
+                    <Text as="span" fontWeight={600}>
+                      ever
+                    </Text>
+                  </>,
                   "We recommend free learning materials (e.g. web courses) first",
                   "By leveraging crowdsourcing, peer learning, and peer-based feedback, we aim to make traditionally paid education products and services available for free (e.g. cohort based courses, certifications)",
                   "Our business model is transparent and will focus on helping learners find quality job offers and scouting for talent (at first, this might evolve)",
