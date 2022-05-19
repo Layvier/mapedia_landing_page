@@ -81,9 +81,11 @@ export const NewsletterSignup: React.FC<{}> = () => {
         </Text>
         {!status && (
           <Flex
+            as="form"
             direction={{ base: "column", sm: "row" }}
             alignItems="stretch"
             justifyContent="space-between"
+            onSubmit={(e) => e.preventDefault()}
           >
             <Input
               aria-label="email"
@@ -103,6 +105,7 @@ export const NewsletterSignup: React.FC<{}> = () => {
 
             <Button
               colorScheme="teal"
+              type="submit"
               bgColor="primary"
               size={responsiveBtnInputSize} //{{ base: "lg", sm: "xl" }}
               w={{ sm: "34%" }}

@@ -19,6 +19,7 @@ import {
 import { RiGithubFill } from "@react-icons/all-files/ri/RiGithubFill";
 import { RiTwitterLine } from "@react-icons/all-files/ri/RiTwitterLine";
 import { TiArrowRightOutline } from "@react-icons/all-files/ti/TiArrowRightOutline";
+import { AiOutlineMedium } from "@react-icons/all-files/ai/AiOutlineMedium";
 import * as React from "react";
 import { Accordeon } from "../components/Accordeon";
 import { NewsletterSignup } from "../components/NewsletterSignup";
@@ -40,6 +41,16 @@ const { scroller } = Scroll;
 const BORDER_RADIUS = 40;
 
 const IndexPage = () => {
+  React.useEffect(() => {
+    if (!document) return;
+
+    window.addEventListener("resize", () => {
+      document
+        .querySelector(":root")
+        //@ts-ignore
+        ?.style.setProperty("--vh", window.innerHeight / 100 + "px");
+    });
+  }, []);
   return (
     <Flex
       as="main"
@@ -64,12 +75,12 @@ const IndexPage = () => {
       </Box>
       <Flex
         pt={{ base: 28, md: 32, lg: 40 }}
-        minH={{ base: "86vh", sm: "100vh" }}
+        minH={{ base: "calc(100 * var(--vh))", sm: "100vh" }}
         pb={24}
       >
         <Stack direction="column" spacing={{ base: 2, md: 4 }} zIndex={1}>
           <Heading
-            fontSize={{ base: "58px", md: "110px", lg: "140px" }}
+            fontSize={{ base: "48px", sm: "60px", md: "110px", lg: "140px" }}
             fontWeight={600}
             color="primary"
             as="h1"
@@ -87,7 +98,7 @@ const IndexPage = () => {
               as="h2"
               color="white"
               fontWeight={400}
-              fontSize={{ base: "30px", md: "40px", lg: "50px" }}
+              fontSize={{ base: "24px", sm: "30px", md: "40px", lg: "50px" }}
             >
               Explore. Learn. Grow.
             </Heading>
@@ -368,6 +379,13 @@ const IndexPage = () => {
               href="https://github.com/Mapedia-org/"
               text="Github"
               icon={<RiGithubFill fontSize="1.1em" />}
+            />
+          </WrapItem>
+          <WrapItem>
+            <CommunityLink
+              href="https://mapedia-org.medium.com/"
+              text="Medium"
+              icon={<AiOutlineMedium fontSize="1.1em" />}
             />
           </WrapItem>
         </Wrap>
