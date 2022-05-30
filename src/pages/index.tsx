@@ -46,7 +46,10 @@ const BORDER_RADIUS = 40;
 const IndexPage = () => {
   React.useEffect(() => {
     if (!document) return;
-
+    document
+      .querySelector(":root")
+      //@ts-ignore
+      ?.style.setProperty("--vh", window.innerHeight / 100 + "px");
     window.addEventListener("resize", () => {
       document
         .querySelector(":root")
