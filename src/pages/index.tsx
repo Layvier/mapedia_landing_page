@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Center,
   Flex,
   FlexProps,
@@ -13,6 +14,7 @@ import {
   ListItem,
   Stack,
   Text,
+  useBreakpointValue,
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";
@@ -20,6 +22,7 @@ import { RiGithubFill } from "@react-icons/all-files/ri/RiGithubFill";
 import { RiTwitterLine } from "@react-icons/all-files/ri/RiTwitterLine";
 import { TiArrowRightOutline } from "@react-icons/all-files/ti/TiArrowRightOutline";
 import { AiOutlineMedium } from "@react-icons/all-files/ai/AiOutlineMedium";
+import { HiOutlineMail } from "@react-icons/all-files/hi/HiOutlineMail";
 import * as React from "react";
 import { Accordeon } from "../components/Accordeon";
 import { NewsletterSignup } from "../components/NewsletterSignup";
@@ -34,7 +37,7 @@ import TopostainTeal from "../images/topostain_teal.svg";
 import DotsCheckmark from "../images/dots_checkmark.svg";
 // @ts-ignore
 import Logo from "../images/logo.svg";
-import { ArrowDownIcon } from "@chakra-ui/icons";
+import { ArrowDownIcon, EmailIcon } from "@chakra-ui/icons";
 import Scroll from "react-scroll";
 const { scroller } = Scroll;
 
@@ -51,6 +54,12 @@ const IndexPage = () => {
         ?.style.setProperty("--vh", window.innerHeight / 100 + "px");
     });
   }, []);
+
+  const buttonSize =
+    useBreakpointValue({
+      base: "md",
+      md: "lg",
+    }) || "lg";
   return (
     <Flex
       as="main"
@@ -77,6 +86,7 @@ const IndexPage = () => {
         pt={{ base: 28, md: 32, lg: 40 }}
         minH={{ base: "calc(100 * var(--vh))", sm: "100vh" }}
         pb={24}
+        position="relative"
       >
         <Stack direction="column" spacing={{ base: 2, md: 4 }} zIndex={1}>
           <Heading
@@ -103,6 +113,22 @@ const IndexPage = () => {
               Explore. Learn. Grow.
             </Heading>
           </Stack>
+          <Box pt={{ base: 6, md: 10 }}>
+            <Button
+              variant="solid"
+              size={buttonSize}
+              colorScheme="blue"
+              rightIcon={<HiOutlineMail />}
+              onClick={() =>
+                scroller.scrollTo("newsletter", {
+                  smooth: true,
+                  duration: 600,
+                })
+              }
+            >
+              Checkout our Newsletter!
+            </Button>
+          </Box>
         </Stack>
       </Flex>
 
@@ -120,7 +146,7 @@ const IndexPage = () => {
           _active={{}}
           _focus={{}}
           left="50%"
-          fontWeight={500}
+          fontWeight={400}
           transform="translate(-50%,0)"
           color="white"
           fontSize={{ base: "24px", md: "32px" }}
@@ -139,19 +165,19 @@ const IndexPage = () => {
           left="50%"
           transform="translate(-50%, -50%)"
           aria-label="Learn more"
-          bgColor="secondary"
+          bgColor="#F0F0F0"
           onClick={() =>
             scroller.scrollTo("intro", {
               smooth: true,
               duration: 600,
             })
           }
-          _hover={{ bgColor: "blue.500" }}
+          _hover={{ bgColor: "white" }}
           _active={{}}
           _focus={{}}
           icon={<ArrowDownIcon boxSize={7} />}
           size="lg"
-          color="white"
+          color="background"
           isRound
         />
         <Heading fontSize={{ base: "30px", md: "50px" }} color="primary">
@@ -391,6 +417,7 @@ const IndexPage = () => {
         </Wrap>
       </Section>
       <Section
+        id="newsletter"
         title={
           <>
             Follow our{" "}
