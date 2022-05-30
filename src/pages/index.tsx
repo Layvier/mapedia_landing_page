@@ -55,11 +55,14 @@ const IndexPage = () => {
     });
   }, []);
 
-  const buttonSize =
-    useBreakpointValue({
+  const buttonSize = useBreakpointValue(
+    {
       base: "md",
-      md: "lg",
-    }) || "lg";
+      sm: "lg",
+      md: "xl",
+    },
+    "lg"
+  );
   return (
     <Flex
       as="main"
@@ -83,7 +86,7 @@ const IndexPage = () => {
         />
       </Box>
       <Flex
-        pt={{ base: 28, md: 32, lg: 40 }}
+        pt={{ base: 24, md: 28, lg: 32 }}
         minH={{ base: "calc(100 * var(--vh))", sm: "100vh" }}
         pb={24}
         position="relative"
@@ -117,6 +120,8 @@ const IndexPage = () => {
             <Button
               variant="solid"
               size={buttonSize}
+              maxH="52px"
+              borderRadius={12}
               colorScheme="blue"
               rightIcon={<HiOutlineMail />}
               onClick={() =>
