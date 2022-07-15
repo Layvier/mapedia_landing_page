@@ -34,13 +34,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Mapedia.org - Explore. Learn. Grow.`,
-        short_name: `Mapedia.org`,
-        description: `Mapedia is a learning map built collectively to support learners learn to any topic seamlessly. Follow us, we're launching this summer;)`,
+        name: `Sci-Map.org`,
+        short_name: `Sci-Map.org`,
+        description: `Sci-Map.org evolved into Mapedia.org`,
         lang: `en`,
         start_url: `/`,
         display: `standalone`,
-        icon: `src/images/favicon.svg`,
+        icon: `src/images/favicon.png`,
       },
     },
     "gatsby-plugin-remove-serviceworker",
