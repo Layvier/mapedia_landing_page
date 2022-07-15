@@ -43,7 +43,7 @@ module.exports = {
         icon: `src/images/favicon.svg`,
       },
     },
-    "gatsby-plugin-offline",
+    "gatsby-plugin-remove-serviceworker",
     {
       resolve: `gatsby-plugin-plausible`,
       options: {
