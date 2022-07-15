@@ -3,11 +3,15 @@ import * as React from "react";
 import { useTimer } from "react-timer-hook";
 
 const IndexPage = () => {
-  const redirectionLink = `https://mapedia.org${window.location.pathname}${window.location.search}`;
+  const redirectionLink =
+    typeof window !== "undefined"
+      ? `https://mapedia.org${window.location.pathname}${window.location.search}`
+      : "";
 
   const { seconds } = useTimer({
     expiryTimestamp: new Date(Date.now() + 5 * 1000),
-    onExpire: () => window.location.replace(redirectionLink),
+    onExpire: () =>
+      typeof window !== "undefined" && window.location.replace(redirectionLink),
   });
 
   return (
